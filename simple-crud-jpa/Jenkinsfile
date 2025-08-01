@@ -1,3 +1,4 @@
+//belajar cicd
 pipeline {
     agent any
 
