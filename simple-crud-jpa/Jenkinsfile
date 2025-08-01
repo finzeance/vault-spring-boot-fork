@@ -15,7 +15,7 @@ pipeline {
         }
         stage('build & package') {
             steps {
-                dir('$PROJECT_DIR}'){
+                dir("${PROJECT_DIR}"){
                     sh 'mvn clean package -DskipTests'
                 }
             }
@@ -27,7 +27,7 @@ pipeline {
         }
         stage('build docker image'){
             steps {
-                dir("$PROJECT_DIR}"){
+                dir("${PROJECT_DIR}"){
                     sh "docker build -t ${DOCKER_IMAGE} ."
                 }
             }
